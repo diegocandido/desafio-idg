@@ -1,0 +1,26 @@
+extends ../layout
+
+block content
+    h1 Cadastro de Dados
+    hr
+    br
+    form(method="POST", action="/usuarios", role="form")
+      div(class="form-group")
+        label Titulo:
+        input(type="text", name="titulo", class="form-control")
+      div(class="form-group")
+        label Slogan:
+        input(type="text", name="slogan", class="form-control")
+      div(class="form-group")
+        label Descrição:
+        input(type="text", name="descricao", class="form-control")
+      div(class="form-group")
+        label Corpo:
+        input(type="text", name="corpo", class="form-control")
+      div(class="form-group")
+        label Autor:
+        input(type="text", name="autor", class="form-control")
+      input(type="submit", value="Cadastrar", class="btn btn-success")
+    br
+    br
+    a(href="/usuarios" title="Voltar") Voltar

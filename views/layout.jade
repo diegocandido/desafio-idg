@@ -1,0 +1,23 @@
+doctype
+html(lang="pt-BR", "ng-app")
+head
+	title= title
+	link(rel='stylesheet', href='/bootstrap/css/bootstrap.min.css')
+	link(rel='stylesheet', href='/stylesheets/style.css')
+body
+	div(class="navbar navbar-default")
+		div(class="container")
+			div(class="navbar-header")
+				a(href="/" class="navbar-brand") API Nodejs
+			div(class="navbar-collapse collapse" id="navbar-main")
+				ul(class="nav navbar-nav")
+					li(class="dropdown")
+						a(href="/usuarios") Cadastros
+					li
+						a(href="http://www.diegocandido.com") Site Diego
+	div(class="container")
+		block content
+	
+		footer
+			script(src="/node_modules/angular/angular.js")
+			script(src="/js/search.js")

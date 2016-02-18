@@ -1,0 +1,17 @@
+extends ../layout
+
+block content
+    h1= value.autor
+    hr
+    br
+    p ID: #{value._id}
+    p Titulo: #{value.titulo}
+    p Slogan: #{value.slogan}
+    p Descrição: #{value.descricao}
+    p Corpo: #{value.corpo}
+    br
+    form(method="POST", action="/usuarios/delete/#{value._id}", role="form")
+      input(type="hidden" name="_method" value="delete")
+      input(type="submit", value="Excluir", class="btn btn-danger")
+    br
+    a(href="/usuarios" title="Voltar") Voltar
